@@ -22,4 +22,12 @@
     <td><a href="https://www.acmicpc.net/problem/1986">[M 1986 체스]</a></td>
     <td><a href="https://www.acmicpc.net/problem/2156">[M 2156 포도주 시식]</a></td>
   </tr>
+  <tr>
+    <td>240923</td>
+    <td><a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15MeBKAOgCFAYD">[S 1245 균형점]</a></td>
+    <td><a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15PTkqAPYCFAYD">[S 1248 공통조상]</a></td>
+    <td><a href="https://www.acmicpc.net/problem/2468">[M 2468 안전 영역]</a></td>
+    <td><a href="https://www.acmicpc.net/problem/2583">[M 2583 영역 구하기]</a></td>
+    <td><a href="https://www.acmicpc.net/problem/13901">[M 13901 로봇]</a></td>
+  </tr>
 </table>

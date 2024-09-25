@@ -17,7 +17,6 @@ public class boj_1986_체스 {
 	static int knightY[] = { 1, 2, 2, 1, -1, -2, -2, -1 };
 	static int queenX[] = { 0, 0, -1, 1, 1, 1, -1, -1 };
 	static int queenY[] = { 1, -1, 0, 0, 1, -1, -1, 1 };
-	static int cnt = 0;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -48,15 +47,17 @@ public class boj_1986_체스 {
 			int x = Integer.parseInt(st.nextToken());
 			int y = Integer.parseInt(st.nextToken());
 
-			chess[x][y] = -1;
+			chess[x][y] = 3;
 		}
 
 		queenMove(n, m);
 		knightMove(n, m);
 
+		int cnt = 0;
+
 		// 안전한 자리 = 0
-		for (int i = 1; i < n + 1; i++) {
-			for (int j = 1; j < m + 1; j++) {
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= m; j++) {
 				if (chess[i][j] == 0) {
 					cnt++;
 				}
@@ -64,30 +65,36 @@ public class boj_1986_체스 {
 		}
 
 		System.out.println(cnt);
+		
+//		for(int i = 0; i<=n; i++) {
+//			for(int j = 0; j<=m; j++) {
+//				System.out.print(chess[i][j]+ " ");
+//			}
+//			System.out.println();
+//		}
 
 	}
 
 	private static void knightMove(int n, int m) {
-		for (int i = 1; i < n + 1; i++) {
-			for (int j = 1; j < m + 1; j++) {
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= m; j++) {
 				if (chess[i][j] == 2) {
 					for (int d = 0; d < 8; d++) {
 						int nx = i + knightX[d];
 						int ny = j + knightY[d];
-						if(nx < 0 || ny < 0 || nx >= n + 1 || ny >= m+1||chess[nx][ny]!=0) {
-							continue;
+						if (nx >= 1 && ny >= 1 && nx <= n && ny <= m && chess[nx][ny] == 0) {
+
+							chess[nx][ny] = -1;
 						}
-						chess[nx][ny] = -1;
 					}
 				}
 			}
 		}
-
 	}
 
 	private static void queenMove(int n, int m) {
-		for (int i = 1; i < n + 1; i++) {
-			for (int j = 1; j < m + 1; j++) {
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= m; j++) {
 				if (chess[i][j] == 1) {
 					for (int d = 0; d < 8; d++) {
 						int nx = i;
@@ -95,7 +102,7 @@ public class boj_1986_체스 {
 						while (true) {
 							nx += queenX[d];
 							ny += queenY[d];
-							if (nx < 0 || ny < 0 || nx >= n + 1 || ny >= m + 1 || chess[nx][ny] != 0)
+							if (nx < 1 || ny < 1 || nx > n || ny > m || chess[nx][ny] == 1 || chess[nx][ny] == 2 || chess[nx][ny] == 3)
 								break;
 							chess[nx][ny] = -1;
 						}

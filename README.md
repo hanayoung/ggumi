@@ -54,7 +54,7 @@
     <td>💙</td>
     <td>💙</td>
   </tr>
-<td>240923</td>
+<td>240924</td>
     <td><a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15OZ4qAPICFAYD&&">[S 1247 최적 경로]</a></td>
     <td><a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18NaZqIt8CFAZN">[S 1259 금속막대]</a></td>
     <td><a href="https://www.acmicpc.net/problem/11403">[M 11403 경로찾기]</a></td>
@@ -68,5 +68,35 @@
     <td>💙 </td>
     <td>💙</td>
     <td>💙</td>
+  </tr>
+  <td>240926</td>
+    <td><a href="https://www.acmicpc.net/problem/3184">[M 3184 양]</a></td>
+    <td><a href="https://www.acmicpc.net/problem/15486">[M 15486 퇴사2]</a></td>
+    <td><a href="https://www.acmicpc.net/problem/14503">[M 14503 로봇 청소기]</a></td>
+    <td><a href="https://www.acmicpc.net/problem/14891">[M 14891 톱니바퀴]</a></td>
+    <td><a href="https://www.acmicpc.net/problem/15686">[M 15686 치킨배달]</a></td>
+  </tr>
+<tr>
+    <td> </td>
+    <td>💙 </td>
+    <td> </td>
+    <td>💙 </td>
+    <td> </td>
+    <td>💙</td>
+  </tr>
+   <td>240927</td>
+    <td><a href="https://www.acmicpc.net/problem/17070">[M 17070 파이프 옮기기1]</a></td>
+    <td><a href="https://www.acmicpc.net/problem/1074">[M 1074 Z]</a></td>
+    <td><a href="https://www.acmicpc.net/problem/2251">[M 2251 물통]</a></td>
+    <td><a href="https://www.acmicpc.net/problem/20055">[M 20055 컨베이어 벨트 위의 로봇]</a></td>
+    <td><a href="https://www.acmicpc.net/problem/21608">[M 21608 상어 초등학교]</a></td>
+  </tr>
+<tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td></td>
+    <td></td>
   </tr>
 </table>

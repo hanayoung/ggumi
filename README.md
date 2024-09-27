@@ -77,8 +77,8 @@
     <td><a href="https://www.acmicpc.net/problem/15686">[M 15686 치킨배달]</a></td>
   </tr>
 <tr>
-    <td> 💙</td>
     <td> </td>
+    <td>💙 </td>
     <td> </td>
     <td>💙 </td>
     <td> </td>

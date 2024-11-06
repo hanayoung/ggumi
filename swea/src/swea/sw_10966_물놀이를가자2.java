@@ -16,7 +16,7 @@ public class sw_10966_물놀이를가자2 {
 	static int dy[] = { 1, -1, 0, 0 };
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		 System.setIn(new FileInputStream("10966.txt"));
+		System.setIn(new FileInputStream("10966.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(br.readLine());
 		for (int tc = 1; tc <= T; tc++) {
@@ -24,67 +24,47 @@ public class sw_10966_물놀이를가자2 {
 			N = Integer.parseInt(st.nextToken());
 			M = Integer.parseInt(st.nextToken());
 			arr = new char[N][M];
-			dist = new int [N][M];
-			
+			Queue<int[]> queue = new LinkedList<>();
+			boolean[][] visited = new boolean[N][M];
+
 			for (int i = 0; i < N; i++) {
 				String input = br.readLine();
 				for (int j = 0; j < M; j++) {
 					arr[i][j] = input.charAt(j);
+					if (arr[i][j] == 'W') {
+						queue.add(new int[] { i, j, 0 });
+						visited[i][j] = true;
+					}
 				}
 			}
-
+			int cnt = 0;
 			int sum = 0;
-			for (int i = 0; i < N; i++) {
-				for (int j = 0; j < M; j++) {
-					if (arr[i][j] == 'W') {
-						int answer = bfs(i,j);
+
+			while (!queue.isEmpty()) {
+				int current[] = queue.poll();
+				int py = current[0];
+				int px = current[1];
+				cnt = current[2];
+				
+				if(arr[py][px] =='L') {
+					sum+=cnt;
+				}
+
+				for (int i = 0; i < 4; i++) {
+					int nx = px + dx[i];
+					int ny = py + dy[i];
+
+					if (nx < 0 || ny < 0 || ny >= N || nx >= M || visited[ny][nx]) {
+						continue;
 					}
 
-				}
-			}
-			System.out.println("#" + tc + " " + sum);
-			
-		}
-	}
-
-	private static int bfs(int y, int x) {
-		Queue<int[]> queue = new LinkedList<>();
-		boolean[][] visited = new boolean[N][M];
-		int cnt = 0;
-		int sum = 0;
-		
-
-		queue.add(new int[] { y,x, 1 }); // x위치, y위치, cnt
-		visited[y][x] = true;
-		dist[y][x] = cnt;
-
-		while (!queue.isEmpty()) {
-			int current[] = queue.poll();
-			int py = current[0];
-			int px = current[1];
-			cnt = current[2];
-
-			for (int i = 0; i < 4; i++) {
-				int nx = px + dx[i];
-				int ny = py + dy[i];
-
-				if (nx < 0 || ny < 0 || ny >= N || nx >= M || visited[ny][nx]) {
-					continue;
-				}
-//				if(arr[ny][nx]=='W') {
-//					return cnt;
-//				}
-
-				if (arr[ny][nx] == 'L') {
-					queue.add(new int[] { ny,nx, cnt + 1 });
+					queue.add(new int[] { ny, nx, cnt + 1 });
 					visited[ny][nx] = true;
-					
-					
 				}
 			}
-		}
 		
-		return -1;
-	}
+			System.out.println("#"+ tc + " "+ sum);
 
+		}
+	}
 }

@@ -47,6 +47,12 @@ public class sw_1824_혁진이의프로그램검증 {
 
 			while (true) {
 				
+				if(visited[nr][nc][memory][dir]) {
+					System.out.println("#"+tc+" "+"NO");
+					break;
+				}
+				visited[nr][nc][memory][dir] = true;
+				
 				char command = map[nr][nc];
 				
 				
@@ -54,11 +60,7 @@ public class sw_1824_혁진이의프로그램검증 {
 					System.out.println("#"+tc+" "+"YES");
 					break;
 				}
-				if(visited[nr][nc][memory][dir]) {
-					System.out.println("#"+tc+" "+"NO");
-					break;
-				}
-				visited[nr][nc][memory][dir] = true;
+				
 				
 
 				if (command == '<') { // 좌

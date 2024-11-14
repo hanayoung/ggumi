@@ -82,7 +82,7 @@ public class boj_17471_게리맨더링 {
 		boolean visited[] = new boolean[N];
 		
 		visited[list.get(0)] = true;
-		queue.add(list.get(0));
+		queue.add(list.get(0)); //시작 노드를 큐에 넣음. 그러면 그 해당 노드랑 연결된 애들도 같이 들어감. 
 		int cnt = 1;
 
 		while (!queue.isEmpty()) {
